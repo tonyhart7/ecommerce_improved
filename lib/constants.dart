@@ -11,3 +11,15 @@ const hSecondaryColor = Color(0xFF636E72);
 const hTextColor = Color(0xFF2D3436);
 
 const hAnimationDuration = Duration(milliseconds: 200);
+
+// Form Error
+final RegExp emailValidatorRegExp =
+    RegExp(r"^[a-zA-Z0-9.]+@[a-zA-Z0-9]+\.[a-zA-Z]+");
+const String hEmailNullError = "Please Enter your Email";
+const String hInvalidEmailError = "Please Enter Valid Email";
+const String hPassNullError = "Please Enter your password";
+const String hShortPassError = "Password is too short";
+const String hMatchPassError = "Passwords don't match";
+const String hNamelNullError = "Please Enter your name";
+const String hPhoneNumberNullError = "Please Enter your phone number";
+const String hAddressNullError = "Please Enter your address";
