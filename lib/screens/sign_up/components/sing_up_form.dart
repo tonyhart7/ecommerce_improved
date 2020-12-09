@@ -1,22 +1,21 @@
 import 'package:ecommerce_improved/components/default_button.dart';
 import 'package:ecommerce_improved/components/form_error.dart';
-import 'package:ecommerce_improved/screens/forgot_password/forgot_password_screen.dart';
-import 'package:ecommerce_improved/screens/login_success/components/login_success_screen.dart';
+import 'package:ecommerce_improved/screens/complete_profile/complete_profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
 import '../../../size_config.dart';
 
-class SignForm extends StatefulWidget {
+class SignUpForm extends StatefulWidget {
   @override
-  _SignFormState createState() => _SignFormState();
+  _SignUpFormState createState() => _SignUpFormState();
 }
 
-class _SignFormState extends State<SignForm> {
+class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
   String email;
   String password;
-  bool remember = false;
+  String confirmPassword;
   final List<String> errors = [];
 
   void addError({String error}) {
@@ -39,50 +38,62 @@ class _SignFormState extends State<SignForm> {
       key: _formKey,
       child: Column(
         children: [
-          signInEmailFormField(),
+          signupEmailFormField(),
           SizedBox(height: getProportionalScreenHeight(30)),
-          signInPasswdFormField(),
+          signupPasswdFormField(),
           SizedBox(height: getProportionalScreenHeight(30)),
-          Row(
-            children: [
-              Checkbox(
-                value: remember,
-                activeColor: hPrimaryColor,
-                onChanged: (value) {
-                  setState(() {
-                    remember = value;
-                  });
-                },
-              ),
-              Text('Remember Me'),
-              Spacer(),
-              GestureDetector(
-                onTap: () => Navigator.pushNamed(
-                    context, ForgotPasswordScreen.routeName),
-                child: Text(
-                  'Forgot Password',
-                  style: TextStyle(decoration: TextDecoration.underline),
-                ),
-              )
-            ],
-          ),
+          signupConfirmPassFormField(),
           FormError(errors: errors),
-          SizedBox(height: getProportionalScreenHeight(20)),
+          SizedBox(height: getProportionalScreenHeight(50)),
           DefaultButton(
             text: 'Continue',
             press: () {
               if (_formKey.currentState.validate()) {
-                _formKey.currentState.save();
-                Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                Navigator.pushReplacementNamed(
+                    context, CompleteProfileScreen.routeName);
               }
             },
-          )
+          ),
         ],
       ),
     );
   }
 
-  TextFormField signInPasswdFormField() {
+  TextFormField signupConfirmPassFormField() {
+    return TextFormField(
+      onSaved: (newValue) => confirmPassword = newValue,
+      obscureText: true,
+      onChanged: (value) {
+        if (value.isNotEmpty) {
+          removeError(error: hPassNullError);
+        } else if (value.isNotEmpty && password == confirmPassword) {
+          removeError(error: hMatchPassError);
+        }
+        confirmPassword = value;
+      },
+      validator: (value) {
+        if (value.isEmpty) {
+          addError(error: hPassNullError);
+          return "";
+        } else if ((password != value)) {
+          addError(error: hMatchPassError);
+          return "";
+        }
+        return null;
+      },
+      decoration: InputDecoration(
+        labelText: 'Confirm Password',
+        hintText: 'Re-enter your password',
+        floatingLabelBehavior: FloatingLabelBehavior.always,
+        suffixIcon: Padding(
+          padding: const EdgeInsets.only(right: 20),
+          child: Icon(Icons.lock_outlined),
+        ),
+      ),
+    );
+  }
+
+  TextFormField signupPasswdFormField() {
     return TextFormField(
       onSaved: (newValue) => password = newValue,
       obscureText: true,
@@ -116,7 +127,7 @@ class _SignFormState extends State<SignForm> {
     );
   }
 
-  TextFormField signInEmailFormField() {
+  TextFormField signupEmailFormField() {
     return TextFormField(
       keyboardType: TextInputType.emailAddress,
       onSaved: (newValue) => email = newValue,

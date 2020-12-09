@@ -7,10 +7,11 @@ class Body extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        SizedBox(height: SizeConfig.screenHeight * 0.04),
+        SizedBox(height: SizeConfig.screenHeight * 0.03),
         Image.asset(
           'assets/images/login success.jpg',
           height: SizeConfig.screenHeight * 0.5, //50%
+          fit: BoxFit.fitHeight,
         ),
         SizedBox(height: SizeConfig.screenHeight * 0.08),
         Text(
