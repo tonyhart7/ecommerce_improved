@@ -74,6 +74,7 @@ class _SignFormState extends State<SignForm> {
               if (_formKey.currentState.validate()) {
                 _formKey.currentState.save();
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+                FocusScope.of(context).unfocus();
               }
             },
           )
