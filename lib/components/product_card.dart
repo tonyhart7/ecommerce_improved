@@ -11,71 +11,76 @@ class ProductCard extends StatelessWidget {
     this.width = 140,
     this.aspectRation = 1.02,
     @required this.product,
+    @required this.press,
   }) : super(key: key);
 
   final double width, aspectRation;
   final Product product;
+  final GestureTapCallback press;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: EdgeInsets.only(left: getProportionalScreenWidth(20)),
-      child: SizedBox(
-        width: getProportionalScreenWidth(width),
-        child: Column(
-          children: [
-            AspectRatio(
-              aspectRatio: aspectRation,
-              child: Container(
-                padding: EdgeInsets.all(getProportionalScreenWidth(20)),
-                decoration: BoxDecoration(
-                  color: hSecondaryColor.withOpacity(0.1),
-                  borderRadius: BorderRadius.circular(15),
+      child: GestureDetector(
+        onTap: press,
+        child: SizedBox(
+          width: getProportionalScreenWidth(width),
+          child: Column(
+            children: [
+              AspectRatio(
+                aspectRatio: aspectRation,
+                child: Container(
+                  padding: EdgeInsets.all(getProportionalScreenWidth(20)),
+                  decoration: BoxDecoration(
+                    color: hSecondaryColor.withOpacity(0.1),
+                    borderRadius: BorderRadius.circular(15),
+                  ),
+                  child: Image.asset(product.images[0]),
                 ),
-                child: Image.asset(product.images[0]),
               ),
-            ),
-            const SizedBox(height: 5),
-            Text(
-              product.title,
-              style: TextStyle(color: Colors.black),
-              maxLines: 2,
-            ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  '\$${product.price}',
-                  style: TextStyle(
-                    fontSize: getProportionalScreenWidth(18),
-                    fontWeight: FontWeight.w600,
-                    color: hPrimaryColor,
-                  ),
-                ),
-                InkWell(
-                  borderRadius: BorderRadius.circular(30),
-                  onTap: () {},
-                  child: Container(
-                    padding: EdgeInsets.all(getProportionalScreenWidth(8)),
-                    width: getProportionalScreenWidth(28),
-                    height: getProportionalScreenWidth(28),
-                    decoration: BoxDecoration(
-                      color: product.isFavourite
-                          ? hPrimaryColor.withOpacity(0.3)
-                          : hSecondaryColor.withOpacity(0.3),
-                      shape: BoxShape.circle,
-                    ),
-                    child: SvgPicture.asset(
-                      'assets/icons/Heart Icon_2.svg',
-                      color: product.isFavourite
-                          ? Color(0xFFFF4848)
-                          : Color(0xFFDBDEE4),
+              const SizedBox(height: 5),
+              Text(
+                product.title,
+                style: TextStyle(color: Colors.black),
+                maxLines: 2,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    '\$${product.price}',
+                    style: TextStyle(
+                      fontSize: getProportionalScreenWidth(18),
+                      fontWeight: FontWeight.w600,
+                      color: hPrimaryColor,
                     ),
                   ),
-                )
-              ],
-            )
-          ],
+                  InkWell(
+                    borderRadius: BorderRadius.circular(30),
+                    onTap: () {},
+                    child: Container(
+                      padding: EdgeInsets.all(getProportionalScreenWidth(8)),
+                      width: getProportionalScreenWidth(28),
+                      height: getProportionalScreenWidth(28),
+                      decoration: BoxDecoration(
+                        color: product.isFavourite
+                            ? hPrimaryColor.withOpacity(0.3)
+                            : hSecondaryColor.withOpacity(0.3),
+                        shape: BoxShape.circle,
+                      ),
+                      child: SvgPicture.asset(
+                        'assets/icons/Heart Icon_2.svg',
+                        color: product.isFavourite
+                            ? Color(0xFFFF4848)
+                            : Color(0xFFDBDEE4),
+                      ),
+                    ),
+                  )
+                ],
+              )
+            ],
+          ),
         ),
       ),
     );
