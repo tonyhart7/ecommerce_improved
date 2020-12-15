@@ -6,12 +6,9 @@ New E-commerce App
 
 
 E-Commerce with 
+
 -Login and SingUp
-
 -OTP
-
 -Home 
-
 -Product
-
 -Cart
