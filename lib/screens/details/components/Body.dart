@@ -12,8 +12,8 @@ class Body extends StatelessWidget {
   final Product product;
 
   const Body({
-    Key key,
-    @required this.product,
+    Key? key,
+    required this.product,
   }) : super(key: key);
 
   @override
@@ -39,10 +39,10 @@ class Body extends StatelessWidget {
                           color: Colors.white,
                           child: Padding(
                             padding: EdgeInsets.only(
-                              left: SizeConfig.screenWidth * 0.15,
-                              right: SizeConfig.screenWidth * 0.15,
-                              top: getProportionalScreenWidth(15),
-                              bottom: getProportionalScreenWidth(40),
+                              left: SizeConfig.screenWidth! * 0.15,
+                              right: SizeConfig.screenWidth! * 0.15,
+                              top: 15,
+                              bottom: 40,
                             ),
                             child: DefaultButton(
                               text: 'Add to Cart',

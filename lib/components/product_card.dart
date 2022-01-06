@@ -3,15 +3,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../constants.dart';
-import '../size_config.dart';
 
 class ProductCard extends StatelessWidget {
   const ProductCard({
-    Key key,
+    Key? key,
     this.width = 140,
     this.aspectRation = 1.02,
-    @required this.product,
-    @required this.press,
+    required this.product,
+    required this.press,
   }) : super(key: key);
 
   final double width, aspectRation;
@@ -21,17 +20,17 @@ class ProductCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.only(left: getProportionalScreenWidth(20)),
+      padding: EdgeInsets.only(left: 20),
       child: GestureDetector(
         onTap: press,
         child: SizedBox(
-          width: getProportionalScreenWidth(width),
+          width: width,
           child: Column(
             children: [
               AspectRatio(
                 aspectRatio: aspectRation,
                 child: Container(
-                  padding: EdgeInsets.all(getProportionalScreenWidth(20)),
+                  padding: EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: hSecondaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(15),
@@ -51,7 +50,7 @@ class ProductCard extends StatelessWidget {
                   Text(
                     '\$${product.price}',
                     style: TextStyle(
-                      fontSize: getProportionalScreenWidth(18),
+                      fontSize: 18,
                       fontWeight: FontWeight.w600,
                       color: hPrimaryColor,
                     ),
@@ -60,9 +59,9 @@ class ProductCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(30),
                     onTap: () {},
                     child: Container(
-                      padding: EdgeInsets.all(getProportionalScreenWidth(8)),
-                      width: getProportionalScreenWidth(28),
-                      height: getProportionalScreenWidth(28),
+                      padding: EdgeInsets.all(8),
+                      width: 28,
+                      height: 28,
                       decoration: BoxDecoration(
                         color: product.isFavourite
                             ? hPrimaryColor.withOpacity(0.3)

@@ -4,11 +4,9 @@ import 'package:ecommerce_improved/screens/details/details_screen.dart';
 import 'package:ecommerce_improved/screens/home/components/section_title.dart';
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
-
 class PopularProduct extends StatelessWidget {
   const PopularProduct({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -19,7 +17,7 @@ class PopularProduct extends StatelessWidget {
           text: 'Popular Product',
           press: () {},
         ),
-        SizedBox(height: getProportionalScreenWidth(20)),
+        SizedBox(height: 20),
         SingleChildScrollView(
           scrollDirection: Axis.horizontal,
           child: Row(
@@ -36,7 +34,6 @@ class PopularProduct extends StatelessWidget {
                   ),
                 ),
               ),
-              SizedBox(width: getProportionalScreenWidth(20)),
             ],
           ),
         ),

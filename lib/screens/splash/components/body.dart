@@ -1,6 +1,5 @@
 import 'package:ecommerce_improved/constants.dart';
 import 'package:ecommerce_improved/screens/sing_in/sing_in_screen.dart';
-import 'package:ecommerce_improved/size_config.dart';
 import 'package:flutter/material.dart';
 
 import '../components/splash_content.dart';
@@ -44,16 +43,15 @@ class _BodyState extends State<Body> {
                 },
                 itemCount: splashData.length,
                 itemBuilder: (context, index) => SplashContent(
-                  text: splashData[index]['text'],
-                  image: splashData[index]['image'],
+                  text: splashData[index]['text']!,
+                  image: splashData[index]['image']!,
                 ),
               ),
             ),
             Expanded(
               flex: 2,
               child: Padding(
-                padding: EdgeInsets.symmetric(
-                    horizontal: getProportionalScreenWidth(20)),
+                padding: EdgeInsets.symmetric(horizontal: 20),
                 child: Column(
                   children: [
                     Spacer(),
@@ -84,7 +82,7 @@ class _BodyState extends State<Body> {
     );
   }
 
-  AnimatedContainer buildDot({int index}) {
+  AnimatedContainer buildDot({int? index}) {
     return AnimatedContainer(
       duration: hAnimationDuration,
       margin: EdgeInsets.only(right: 5),

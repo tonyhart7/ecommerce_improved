@@ -14,19 +14,19 @@ class CompleteProfileForm extends StatefulWidget {
 class _CompleteProfileFormState extends State<CompleteProfileForm> {
   final _formKey = GlobalKey<FormState>();
   final List<String> errors = [];
-  String firstName;
-  String lastName;
-  String phoneNumber;
-  String address;
+  String? firstName;
+  String? lastName;
+  String? phoneNumber;
+  String? address;
 
-  void addError({String error}) {
+  void addError({String? error}) {
     if (!errors.contains(error))
       setState(() {
-        errors.add(error);
+        errors.add(error!);
       });
   }
 
-  void removeError({String error}) {
+  void removeError({String? error}) {
     if (errors.contains(error))
       setState(() {
         errors.remove(error);
@@ -52,7 +52,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
             DefaultButton(
               text: 'Continue',
               press: () {
-                if (_formKey.currentState.validate()) {
+                if (_formKey.currentState!.validate()) {
                   Navigator.pushNamed(context, OtpScreen.routeName);
                 }
               },
@@ -74,7 +74,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         return null;
       },
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           addError(error: hPhoneNumberNullError);
           return '';
         }
@@ -103,7 +103,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         return null;
       },
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           addError(error: hAddressNullError);
           return '';
         }
@@ -146,7 +146,7 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         return null;
       },
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           addError(error: hNameNullError);
           return '';
         }

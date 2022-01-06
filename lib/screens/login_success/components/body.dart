@@ -10,24 +10,24 @@ class Body extends StatelessWidget {
       Expanded(
         child: Column(
           children: [
-            SizedBox(height: SizeConfig.screenHeight * 0.03),
+            SizedBox(height: SizeConfig.screenHeight! * 0.03),
             Image.asset(
               'assets/images/login success.jpg',
-              height: SizeConfig.screenHeight * 0.5, //50%
+              height: SizeConfig.screenHeight! * 0.5, //50%
               fit: BoxFit.fitHeight,
             ),
-            SizedBox(height: SizeConfig.screenHeight * 0.08),
+            SizedBox(height: SizeConfig.screenHeight! * 0.08),
             Text(
               'You good to go',
               style: TextStyle(
-                fontSize: getProportionalScreenWidth(30),
+                fontSize: 30,
                 fontWeight: FontWeight.bold,
                 color: Colors.black,
               ),
             ),
             Spacer(),
             SizedBox(
-              width: SizeConfig.screenWidth * 0.6,
+              width: SizeConfig.screenWidth! * 0.6,
               child: DefaultButton(
                 text: 'Take me to Home',
                 press: () =>

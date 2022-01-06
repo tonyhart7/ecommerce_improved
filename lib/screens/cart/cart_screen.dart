@@ -39,15 +39,15 @@ class CartScreen extends StatelessWidget {
 
 class CheckOutCart extends StatelessWidget {
   const CheckOutCart({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.symmetric(
-        vertical: getProportionalScreenWidth(15),
-        horizontal: getProportionalScreenWidth(30),
+        vertical: 15,
+        horizontal: 30,
       ),
       // height: 174,
       decoration: BoxDecoration(
@@ -72,8 +72,8 @@ class CheckOutCart extends StatelessWidget {
               children: [
                 Container(
                   padding: EdgeInsets.all(10),
-                  height: getProportionalScreenWidth(40),
-                  width: getProportionalScreenWidth(40),
+                  height: 40,
+                  width: 40,
                   decoration: BoxDecoration(
                     color: Color(0xFFF5F6F9),
                     borderRadius: BorderRadius.circular(10),
@@ -106,7 +106,7 @@ class CheckOutCart extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
-                  width: getProportionalScreenWidth(190),
+                  width: 190,
                   child: DefaultButton(
                     text: 'Check Out',
                     press: () {},

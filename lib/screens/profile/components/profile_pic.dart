@@ -1,9 +1,11 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class ProfilePic extends StatelessWidget {
   const ProfilePic({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override
@@ -13,7 +15,6 @@ class ProfilePic extends StatelessWidget {
       width: 115,
       child: Stack(
         fit: StackFit.expand,
-        overflow: Overflow.visible,
         children: [
           CircleAvatar(
             backgroundImage: AssetImage('assets/images/Profile Image.png'),

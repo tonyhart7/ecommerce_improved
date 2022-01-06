@@ -3,13 +3,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class ProductDescription extends StatelessWidget {
   const ProductDescription({
-    Key key,
-    @required this.product,
-    @required this.pressSeeMore,
+    Key? key,
+    required this.product,
+    required this.pressSeeMore,
   }) : super(key: key);
 
   final Product product;
@@ -21,8 +20,7 @@ class ProductDescription extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Text(
             product.title,
             style: Theme.of(context).textTheme.headline6,
@@ -32,8 +30,8 @@ class ProductDescription extends StatelessWidget {
         Align(
           alignment: Alignment.centerRight,
           child: Container(
-            padding: EdgeInsets.all(getProportionalScreenWidth(15)),
-            width: getProportionalScreenWidth(64),
+            padding: EdgeInsets.all(15),
+            width: 64,
             decoration: BoxDecoration(
                 color:
                     product.isFavourite ? Color(0xFFFFE6E6) : Color(0xFFF5F6F9),
@@ -49,9 +47,7 @@ class ProductDescription extends StatelessWidget {
           ),
         ),
         Padding(
-          padding: EdgeInsets.only(
-              left: getProportionalScreenWidth(20),
-              right: getProportionalScreenWidth(64)),
+          padding: EdgeInsets.only(left: 20, right: 64),
           child: Text(
             product.description,
             maxLines: 3,
@@ -59,7 +55,7 @@ class ProductDescription extends StatelessWidget {
         ),
         Padding(
           padding: EdgeInsets.symmetric(
-            horizontal: getProportionalScreenWidth(20),
+            horizontal: 20,
             vertical: 10,
           ),
           child: GestureDetector(

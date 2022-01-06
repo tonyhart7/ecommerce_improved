@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class IconBtnWithCounter extends StatelessWidget {
   const IconBtnWithCounter({
-    Key key,
-    @required this.iconBtn,
+    Key? key,
+    required this.iconBtn,
     this.numOfItems = 0,
-    @required this.press,
+    required this.press,
   }) : super(key: key);
 
   final Icon iconBtn;
@@ -21,11 +20,10 @@ class IconBtnWithCounter extends StatelessWidget {
       onTap: press,
       borderRadius: BorderRadius.circular(50),
       child: Stack(
-        overflow: Overflow.visible,
         children: [
           Container(
-            height: getProportionalScreenWidth(46),
-            width: getProportionalScreenWidth(46),
+            height: 46,
+            width: 46,
             decoration: BoxDecoration(
               color: hSecondaryColor.withOpacity(0.1),
               shape: BoxShape.circle,
@@ -37,8 +35,8 @@ class IconBtnWithCounter extends StatelessWidget {
               top: -3,
               right: 0,
               child: Container(
-                height: getProportionalScreenWidth(16),
-                width: getProportionalScreenWidth(16),
+                height: 16,
+                width: 16,
                 decoration: BoxDecoration(
                   color: Color(0xFFFF4848),
                   shape: BoxShape.circle,
@@ -48,7 +46,7 @@ class IconBtnWithCounter extends StatelessWidget {
                   child: Text(
                     '$numOfItems',
                     style: TextStyle(
-                        fontSize: getProportionalScreenWidth(10),
+                        fontSize: 10,
                         height: 1,
                         color: Colors.white,
                         fontWeight: FontWeight.w600),

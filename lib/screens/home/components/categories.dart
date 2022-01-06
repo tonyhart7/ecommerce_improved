@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../../../size_config.dart';
-
 class Categories extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -14,7 +12,7 @@ class Categories extends StatelessWidget {
       {"icon": "assets/icons/Discover.svg", "text": "More"},
     ];
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -35,10 +33,10 @@ class Categories extends StatelessWidget {
 
 class CategoryCard extends StatelessWidget {
   const CategoryCard({
-    Key key,
-    this.icon,
-    this.text,
-    this.press,
+    Key? key,
+    required this.icon,
+    required this.text,
+    required this.press,
   }) : super(key: key);
 
   final String icon, text;
@@ -49,15 +47,15 @@ class CategoryCard extends StatelessWidget {
     return GestureDetector(
       onTap: press,
       child: SizedBox(
-        width: getProportionalScreenWidth(55),
+        width: 55,
         child: Column(
           children: [
             AspectRatio(
               aspectRatio: 1,
               child: Container(
-                padding: EdgeInsets.all(getProportionalScreenWidth(15)),
-                height: getProportionalScreenWidth(55),
-                width: getProportionalScreenWidth(55),
+                padding: EdgeInsets.all(15),
+                height: 55,
+                width: 55,
                 decoration: BoxDecoration(
                   color: Color(0xFFFFECDF),
                   borderRadius: BorderRadius.circular(10),

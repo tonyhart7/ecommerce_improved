@@ -1,13 +1,12 @@
 import 'package:flutter/material.dart';
 
 import 'package:ecommerce_improved/constants.dart';
-import 'package:ecommerce_improved/size_config.dart';
 
 class SplashContent extends StatelessWidget {
   const SplashContent({
-    Key key,
-    this.text,
-    this.image,
+    Key? key,
+    required this.text,
+    required this.image,
   }) : super(key: key);
   final String text, image;
 
@@ -19,7 +18,7 @@ class SplashContent extends StatelessWidget {
         Text(
           'MAMAZON',
           style: TextStyle(
-            fontSize: getProportionalScreenWidth(36),
+            fontSize: 36,
             color: hPrimaryColor,
             fontWeight: FontWeight.bold,
           ),
@@ -31,8 +30,8 @@ class SplashContent extends StatelessWidget {
         Spacer(flex: 2),
         Image.asset(
           image,
-          height: getProportionalScreenHeight(270),
-          width: getProportionalScreenWidth(300),
+          height: 270,
+          width: 300,
         ),
       ],
     );

@@ -13,17 +13,16 @@ class Body extends StatelessWidget {
       width: double.infinity,
       child: SingleChildScrollView(
         child: Padding(
-          padding:
-              EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+          padding: EdgeInsets.symmetric(horizontal: 20),
           child: Column(
             children: [
               SizedBox(
-                height: SizeConfig.screenHeight * 0.04,
+                height: SizeConfig.screenHeight! * 0.04,
               ),
               Text(
                 'Forgot Password',
                 style: TextStyle(
-                  fontSize: getProportionalScreenWidth(28),
+                  fontSize: 28,
                   color: Colors.black,
                   fontWeight: FontWeight.bold,
                 ),
@@ -33,7 +32,7 @@ class Body extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: SizeConfig.screenHeight * 0.1,
+                height: SizeConfig.screenHeight! * 0.1,
               ),
               ForgotPassForm(),
             ],
@@ -52,7 +51,7 @@ class ForgotPassForm extends StatefulWidget {
 class _ForgotPassFormState extends State<ForgotPassForm> {
   final _formKey = GlobalKey<FormState>();
   List<String> errors = [];
-  String email;
+  String? email;
   @override
   Widget build(BuildContext context) {
     return Form(
@@ -76,7 +75,7 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
               return null;
             },
             validator: (value) {
-              if (value.isEmpty && !errors.contains(hEmailNullError)) {
+              if (value!.isEmpty && !errors.contains(hEmailNullError)) {
                 setState(() {
                   errors.add(hEmailNullError);
                 });
@@ -100,16 +99,16 @@ class _ForgotPassFormState extends State<ForgotPassForm> {
           ),
           SizedBox(height: getProportionalScreenHeight(30)),
           FormError(errors: errors),
-          SizedBox(height: SizeConfig.screenHeight * 0.1),
+          SizedBox(height: SizeConfig.screenHeight! * 0.1),
           DefaultButton(
             text: 'Continue',
             press: () {
-              if (_formKey.currentState.validate()) {
+              if (_formKey.currentState!.validate()) {
                 //TODO Forgot Password Email
               }
             },
           ),
-          SizedBox(height: SizeConfig.screenHeight * 0.1),
+          SizedBox(height: SizeConfig.screenHeight! * 0.1),
           NoAccountText(),
         ],
       ),

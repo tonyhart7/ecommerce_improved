@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'size_config.dart';
-
 const hPrimaryColor = Color(0xFF6BB9F0);
 const hPrimaryLightColor = Color(0xFF89C4F4);
 const hPrimaryGradientColor = LinearGradient(
@@ -15,7 +13,7 @@ const hTextColor = Color(0xFF2D3436);
 const hAnimationDuration = Duration(milliseconds: 200);
 
 final headingStyle = TextStyle(
-  fontSize: getProportionalScreenWidth(28),
+  fontSize: 28,
   fontWeight: FontWeight.bold,
   color: Colors.black,
   height: 1.5,
@@ -34,8 +32,7 @@ const String hPhoneNumberNullError = "Please Enter your phone number";
 const String hAddressNullError = "Please Enter your address";
 
 final otpInputDecoration = InputDecoration(
-  contentPadding:
-      EdgeInsets.symmetric(vertical: getProportionalScreenWidth(15)),
+  contentPadding: EdgeInsets.symmetric(vertical: 15),
   enabledBorder: outlineInputBorder(),
   focusedBorder: outlineInputBorder(),
   border: outlineInputBorder(),

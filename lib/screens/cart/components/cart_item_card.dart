@@ -2,12 +2,11 @@ import 'package:ecommerce_improved/models/Cart.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class CartItemCard extends StatelessWidget {
   const CartItemCard({
-    Key key,
-    @required this.cart,
+    Key? key,
+    required this.cart,
   }) : super(key: key);
 
   final Cart cart;
@@ -17,7 +16,7 @@ class CartItemCard extends StatelessWidget {
     return Row(
       children: [
         SizedBox(
-          width: getProportionalScreenWidth(88),
+          width: 88,
           child: AspectRatio(
             aspectRatio: 0.88,
             child: Container(
@@ -30,7 +29,7 @@ class CartItemCard extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: getProportionalScreenWidth(20)),
+        SizedBox(width: 20),
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

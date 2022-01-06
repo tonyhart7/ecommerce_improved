@@ -2,12 +2,11 @@ import 'package:ecommerce_improved/models/Product.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class ProductImages extends StatefulWidget {
   const ProductImages({
-    Key key,
-    @required this.product,
+    Key? key,
+    required this.product,
   }) : super(key: key);
 
   final Product product;
@@ -23,7 +22,7 @@ class _ProductImagesState extends State<ProductImages> {
     return Column(
       children: [
         SizedBox(
-          width: getProportionalScreenWidth(238),
+          width: 238,
           child: AspectRatio(
             aspectRatio: 1,
             child: Image.asset(widget.product.images[selectedImage]),
@@ -50,10 +49,10 @@ class _ProductImagesState extends State<ProductImages> {
         });
       },
       child: Container(
-        margin: EdgeInsets.only(right: getProportionalScreenWidth(15)),
-        padding: EdgeInsets.all(getProportionalScreenHeight(8)),
-        height: getProportionalScreenWidth(48),
-        width: getProportionalScreenWidth(48),
+        margin: EdgeInsets.only(right: 15),
+        padding: EdgeInsets.all(8),
+        height: 48,
+        width: 48,
         decoration: BoxDecoration(
             color: Colors.white,
             borderRadius: BorderRadius.circular(10),

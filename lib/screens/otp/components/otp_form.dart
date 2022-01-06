@@ -10,9 +10,9 @@ class OtpForm extends StatefulWidget {
 }
 
 class _OtpFormState extends State<OtpForm> {
-  FocusNode pin2FocusNode;
-  FocusNode pin3FocusNode;
-  FocusNode pin4FocusNode;
+  FocusNode? pin2FocusNode;
+  FocusNode? pin3FocusNode;
+  FocusNode? pin4FocusNode;
 
   @override
   void initState() {
@@ -24,15 +24,15 @@ class _OtpFormState extends State<OtpForm> {
 
   @override
   void dispose() {
-    pin2FocusNode.dispose();
-    pin3FocusNode.dispose();
-    pin4FocusNode.dispose();
+    pin2FocusNode!.dispose();
+    pin3FocusNode!.dispose();
+    pin4FocusNode!.dispose();
     super.dispose();
   }
 
-  void nextField({String value, FocusNode focusNode}) {
-    if (value.length == 1) {
-      focusNode.requestFocus();
+  void nextField({String? value, FocusNode? focusNode}) {
+    if (value!.length == 1) {
+      focusNode!.requestFocus();
     }
   }
 
@@ -45,7 +45,7 @@ class _OtpFormState extends State<OtpForm> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               SizedBox(
-                width: getProportionalScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   autofocus: true,
                   keyboardType: TextInputType.number,
@@ -58,7 +58,7 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionalScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   focusNode: pin2FocusNode,
                   keyboardType: TextInputType.number,
@@ -71,7 +71,7 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionalScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   focusNode: pin3FocusNode,
                   keyboardType: TextInputType.number,
@@ -84,7 +84,7 @@ class _OtpFormState extends State<OtpForm> {
                 ),
               ),
               SizedBox(
-                width: getProportionalScreenWidth(60),
+                width: 60,
                 child: TextFormField(
                   focusNode: pin4FocusNode,
                   keyboardType: TextInputType.number,
@@ -92,13 +92,13 @@ class _OtpFormState extends State<OtpForm> {
                   textAlign: TextAlign.center,
                   decoration: otpInputDecoration,
                   onChanged: (value) {
-                    pin4FocusNode.unfocus();
+                    pin4FocusNode!.unfocus();
                   },
                 ),
               ),
             ],
           ),
-          SizedBox(height: SizeConfig.screenHeight * 0.15),
+          SizedBox(height: SizeConfig.screenHeight! * 0.15),
           DefaultButton(
             text: 'Continue',
             press: () {},

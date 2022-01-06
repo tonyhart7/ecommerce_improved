@@ -10,12 +10,11 @@ class Body extends StatelessWidget {
     return SizedBox(
       width: double.infinity,
       child: Padding(
-        padding:
-            EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+        padding: EdgeInsets.symmetric(horizontal: 20),
         child: SingleChildScrollView(
           child: Column(
             children: [
-              SizedBox(height: SizeConfig.screenHeight * 0.02),
+              SizedBox(height: SizeConfig.screenHeight! * 0.02),
               Text(
                 'Complete Profile',
                 style: headingStyle,
@@ -24,7 +23,7 @@ class Body extends StatelessWidget {
                 'Complete your details or continue \nwith social media',
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: SizeConfig.screenHeight * 0.05),
+              SizedBox(height: SizeConfig.screenHeight! * 0.05),
               CompleteProfileForm(),
               SizedBox(height: getProportionalScreenHeight(30)),
               Text(

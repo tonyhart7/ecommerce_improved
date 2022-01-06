@@ -1,11 +1,14 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:ecommerce_improved/constants.dart';
 import 'package:ecommerce_improved/size_config.dart';
 import 'package:flutter/material.dart';
 
 class DefaultButton extends StatelessWidget {
-  const DefaultButton({Key key, this.text, this.press}) : super(key: key);
+  const DefaultButton({Key? key, required this.text, required this.press})
+      : super(key: key);
   final String text;
-  final Function press;
+  final VoidCallback press;
 
   @override
   Widget build(BuildContext context) {
@@ -18,8 +21,7 @@ class DefaultButton extends StatelessWidget {
         onPressed: press,
         child: Text(
           text,
-          style: TextStyle(
-              fontSize: getProportionalScreenWidth(18), color: Colors.white),
+          style: TextStyle(fontSize: 18, color: Colors.white),
         ),
       ),
     );

@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -5,10 +7,10 @@ import '../../../constants.dart';
 
 class ProfileMenu extends StatelessWidget {
   const ProfileMenu({
-    Key key,
-    @required this.text,
-    @required this.icon,
-    @required this.press,
+    Key? key,
+    required this.text,
+    required this.icon,
+    required this.press,
   }) : super(key: key);
 
   final String text, icon;

@@ -1,12 +1,12 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: deprecated_member_use
 
-import '../size_config.dart';
+import 'package:flutter/material.dart';
 
 class RoundedIconBtn extends StatelessWidget {
   const RoundedIconBtn({
-    Key key,
-    @required this.iconData,
-    @required this.press,
+    Key? key,
+    required this.iconData,
+    required this.press,
   }) : super(key: key);
 
   final IconData iconData;
@@ -15,8 +15,8 @@ class RoundedIconBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: getProportionalScreenWidth(40),
-      width: getProportionalScreenWidth(40),
+      height: 40,
+      width: 40,
       child: FlatButton(
         padding: EdgeInsets.zero,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(55)),

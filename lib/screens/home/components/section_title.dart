@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 
-import '../../../size_config.dart';
-
 class SectionTitle extends StatelessWidget {
   const SectionTitle({
-    Key key,
-    @required this.text,
-    @required this.press,
+    Key? key,
+    required this.text,
+    required this.press,
   }) : super(key: key);
 
   final String text;
@@ -15,16 +13,14 @@ class SectionTitle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           Text(
             text,
             style: TextStyle(
-                fontSize: getProportionalScreenWidth(18),
-                color: Colors.black,
-                fontWeight: FontWeight.w500),
+                fontSize: 18, color: Colors.black, fontWeight: FontWeight.w500),
           ),
           GestureDetector(
             onTap: press,

@@ -3,12 +3,11 @@ import 'package:ecommerce_improved/models/Product.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
-import '../../../size_config.dart';
 
 class ColorDots extends StatelessWidget {
   const ColorDots({
-    Key key,
-    @required this.product,
+    Key? key,
+    required this.product,
   }) : super(key: key);
 
   final Product product;
@@ -17,7 +16,7 @@ class ColorDots extends StatelessWidget {
   Widget build(BuildContext context) {
     int selectedColor = 3;
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: Row(
         children: [
           ...List.generate(
@@ -32,7 +31,7 @@ class ColorDots extends StatelessWidget {
             iconData: Icons.remove,
             press: () {},
           ),
-          SizedBox(width: getProportionalScreenWidth(15)),
+          SizedBox(width: 15),
           RoundedIconBtn(
             iconData: Icons.add,
             press: () {},
@@ -45,8 +44,8 @@ class ColorDots extends StatelessWidget {
 
 class ColorDot extends StatelessWidget {
   const ColorDot({
-    Key key,
-    @required this.color,
+    Key? key,
+    required this.color,
     this.isSelected = false,
   }) : super(key: key);
 
@@ -57,8 +56,8 @@ class ColorDot extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(right: 2),
       padding: EdgeInsets.all(8),
-      height: getProportionalScreenWidth(40),
-      width: getProportionalScreenWidth(40),
+      height: 40,
+      width: 40,
       decoration: BoxDecoration(
         shape: BoxShape.circle,
         border:

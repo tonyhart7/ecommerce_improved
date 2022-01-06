@@ -13,17 +13,17 @@ class _BodyState extends State<Body> {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.symmetric(horizontal: getProportionalScreenWidth(20)),
+      padding: EdgeInsets.symmetric(horizontal: 20),
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: SizeConfig.screenHeight * 0.05),
+            SizedBox(height: SizeConfig.screenHeight! * 0.05),
             Text('OTP Verification', style: headingStyle),
             Text('We sent your code to +62 678 128 192'),
             buildTimer(),
-            SizedBox(height: SizeConfig.screenHeight * 0.15),
+            SizedBox(height: SizeConfig.screenHeight! * 0.15),
             OtpForm(),
-            SizedBox(height: SizeConfig.screenHeight * 0.1),
+            SizedBox(height: SizeConfig.screenHeight! * 0.1),
             GestureDetector(
               onTap: () {
                 // resend Otp
@@ -48,7 +48,7 @@ class _BodyState extends State<Body> {
           tween: Tween(begin: 31.0, end: 0),
           duration: Duration(seconds: 30),
           builder: (context, value, child) => Text(
-            '00:${value.toInt()}',
+            '00:$value',
             style: TextStyle(color: hPrimaryColor),
           ),
           onEnd: () {},

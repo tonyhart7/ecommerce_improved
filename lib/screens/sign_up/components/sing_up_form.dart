@@ -13,19 +13,19 @@ class SignUpForm extends StatefulWidget {
 
 class _SignUpFormState extends State<SignUpForm> {
   final _formKey = GlobalKey<FormState>();
-  String email;
-  String password;
-  String confirmPassword;
+  String? email;
+  String? password;
+  String? confirmPassword;
   final List<String> errors = [];
 
-  void addError({String error}) {
+  void addError({String? error}) {
     if (!errors.contains(error))
       setState(() {
-        errors.add(error);
+        errors.add(error!);
       });
   }
 
-  void removeError({String error}) {
+  void removeError({String? error}) {
     if (errors.contains(error))
       setState(() {
         errors.remove(errors);
@@ -48,7 +48,7 @@ class _SignUpFormState extends State<SignUpForm> {
           DefaultButton(
             text: 'Continue',
             press: () {
-              if (_formKey.currentState.validate()) {
+              if (_formKey.currentState!.validate()) {
                 Navigator.pushReplacementNamed(
                     context, CompleteProfileScreen.routeName);
               }
@@ -72,7 +72,7 @@ class _SignUpFormState extends State<SignUpForm> {
         confirmPassword = value;
       },
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           addError(error: hPassNullError);
           return "";
         } else if ((password != value)) {
@@ -106,7 +106,7 @@ class _SignUpFormState extends State<SignUpForm> {
         password = value;
       },
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           addError(error: hPassNullError);
           return "";
         } else if (value.length < 8) {
@@ -140,7 +140,7 @@ class _SignUpFormState extends State<SignUpForm> {
         return null;
       },
       validator: (value) {
-        if (value.isEmpty) {
+        if (value!.isEmpty) {
           addError(error: hEmailNullError);
           return "";
         } else if (!emailValidatorRegExp.hasMatch(value)) {

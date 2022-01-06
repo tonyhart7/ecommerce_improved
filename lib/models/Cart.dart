@@ -1,13 +1,12 @@
 import 'package:ecommerce_improved/models/Product.dart';
-import 'package:flutter/material.dart';
 
 class Cart {
   final Product product;
   final int numOfItems;
 
   Cart({
-    @required this.product,
-    @required this.numOfItems,
+    required this.product,
+    required this.numOfItems,
   });
 }
 
