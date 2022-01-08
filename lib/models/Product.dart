@@ -27,10 +27,7 @@ List<Product> demoProducts = [
   Product(
     id: 1,
     images: [
-      "assets/images/ps4_console_white_1.png",
-      "assets/images/ps4_console_white_2.png",
-      "assets/images/ps4_console_white_3.png",
-      "assets/images/ps4_console_white_4.png",
+      "assets/images/hoodie 1.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -38,8 +35,8 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Wireless Controller for PS4™",
-    price: 64.99,
+    title: "Hoodie Ekse 2X",
+    price: 20.000,
     description: description,
     rating: 4.8,
     isFavourite: true,
@@ -48,7 +45,7 @@ List<Product> demoProducts = [
   Product(
     id: 2,
     images: [
-      "assets/images/Image Popular Product 2.png",
+      "assets/images/hoodie 2.png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -56,8 +53,8 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Nike Sport White - Man Pant",
-    price: 50.5,
+    title: "Hoddie PP",
+    price: 18.000,
     description: description,
     rating: 4.1,
     isPopular: true,
@@ -65,7 +62,7 @@ List<Product> demoProducts = [
   Product(
     id: 3,
     images: [
-      "assets/images/glap.png",
+      "assets/images/chino pants .png",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -73,8 +70,8 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Gloves XC Omega - Polygon",
-    price: 36.55,
+    title: "Chino Pants RA",
+    price: 20.000,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -83,7 +80,7 @@ List<Product> demoProducts = [
   Product(
     id: 4,
     images: [
-      "assets/images/wireless headset.png",
+      "assets/images/hoodie 3.jpg",
     ],
     colors: [
       Color(0xFFF6625E),
@@ -91,8 +88,76 @@ List<Product> demoProducts = [
       Color(0xFFDECB9C),
       Colors.white,
     ],
-    title: "Logitech Head",
-    price: 20.20,
+    title: "Hoddie Tanah Abang",
+    price: 15.000,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 5,
+    images: [
+      "assets/images/hp1.jpg",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Hp abang Alfa",
+    price: 23.000,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 6,
+    images: [
+      "assets/images/hp2.jpg",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Hp abang domar",
+    price: 45.000,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 7,
+    images: [
+      "assets/images/hp3.png",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Hp abang Grab",
+    price: 90.000,
+    description: description,
+    rating: 4.1,
+    isFavourite: true,
+  ),
+  Product(
+    id: 8,
+    images: [
+      "assets/images/hp4.png",
+    ],
+    colors: [
+      Color(0xFFF6625E),
+      Color(0xFF836DB8),
+      Color(0xFFDECB9C),
+      Colors.white,
+    ],
+    title: "Hp abang Gojek",
+    price: 67.000,
     description: description,
     rating: 4.1,
     isFavourite: true,
@@ -100,4 +165,4 @@ List<Product> demoProducts = [
 ];
 
 const String description =
-    "Wireless Controller for PS4™ gives you what you want in your gaming from over precision control your games to sharing …";
+    "Ganteng dan Menggoda adalah Citarasa Post Mortem yang sangat Aduhai";

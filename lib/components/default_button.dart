@@ -1,6 +1,5 @@
 // ignore_for_file: deprecated_member_use
 
-import 'package:ecommerce_improved/constants.dart';
 import 'package:ecommerce_improved/size_config.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +16,7 @@ class DefaultButton extends StatelessWidget {
       height: getProportionalScreenHeight(56),
       child: FlatButton(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        color: hPrimaryColor,
+        color: Colors.orange,
         onPressed: press,
         child: Text(
           text,

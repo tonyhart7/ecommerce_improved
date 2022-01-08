@@ -46,7 +46,7 @@ class _SignUpFormState extends State<SignUpForm> {
           FormError(errors: errors),
           SizedBox(height: getProportionalScreenHeight(50)),
           DefaultButton(
-            text: 'Continue',
+            text: 'Selanjut nya',
             press: () {
               if (_formKey.currentState!.validate()) {
                 Navigator.pushReplacementNamed(
@@ -82,8 +82,8 @@ class _SignUpFormState extends State<SignUpForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: 'Confirm Password',
-        hintText: 'Re-enter your password',
+        labelText: 'Konfirmasi Password',
+        hintText: 'masukkan kembali password',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),
@@ -117,7 +117,7 @@ class _SignUpFormState extends State<SignUpForm> {
       },
       decoration: InputDecoration(
         labelText: 'Password',
-        hintText: 'Enter your password',
+        hintText: 'masukkan password',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),
@@ -151,7 +151,7 @@ class _SignUpFormState extends State<SignUpForm> {
       },
       decoration: InputDecoration(
         labelText: 'Email',
-        hintText: 'Enter your email',
+        hintText: 'masukkan Email',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),

@@ -16,11 +16,11 @@ class Body extends StatelessWidget {
             children: [
               SizedBox(height: SizeConfig.screenHeight! * 0.02),
               Text(
-                'Register Account',
+                'Mendaftar Akun',
                 style: headingStyle,
               ),
               Text(
-                'Complete your details or continue \n with social media',
+                'Selesaikan Registrasi \n atau daftar dengan sosial media',
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: SizeConfig.screenHeight! * 0.07),
@@ -45,7 +45,7 @@ class Body extends StatelessWidget {
               ),
               SizedBox(height: getProportionalScreenHeight(20)),
               Text(
-                'By Register your confirm that you agree \n with our Term and Condition',
+                'dengan mendaftar berarti anda\n menyetujui syarat dan ketentuan',
                 textAlign: TextAlign.center,
               ),
             ],

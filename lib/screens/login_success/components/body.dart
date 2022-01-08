@@ -18,7 +18,7 @@ class Body extends StatelessWidget {
             ),
             SizedBox(height: SizeConfig.screenHeight! * 0.08),
             Text(
-              'You good to go',
+              'Login berhasil',
               style: TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
@@ -29,7 +29,7 @@ class Body extends StatelessWidget {
             SizedBox(
               width: SizeConfig.screenWidth! * 0.6,
               child: DefaultButton(
-                text: 'Take me to Home',
+                text: 'ke Home Menu',
                 press: () =>
                     Navigator.popAndPushNamed(context, HomeScreen.routeName),
               ),

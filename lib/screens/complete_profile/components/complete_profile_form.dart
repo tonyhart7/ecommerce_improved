@@ -81,8 +81,8 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: 'Phone Number',
-        hintText: 'Enter your phone number',
+        labelText: 'Nomor Hp',
+        hintText: 'Masukkan Nomer HP',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),
@@ -110,8 +110,8 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: 'Adress',
-        hintText: 'Enter your Adress',
+        labelText: 'Alamat',
+        hintText: 'Masukkan Alamat',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),
@@ -125,8 +125,8 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
     return TextFormField(
       onSaved: (newValue) => lastName = newValue,
       decoration: InputDecoration(
-        labelText: 'Last Name',
-        hintText: 'Enter your last name',
+        labelText: 'Nama Belakang',
+        hintText: 'Masukkan Nama Belakang',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),
@@ -153,8 +153,8 @@ class _CompleteProfileFormState extends State<CompleteProfileForm> {
         return null;
       },
       decoration: InputDecoration(
-        labelText: 'First Name',
-        hintText: 'Enter your first name',
+        labelText: 'Nama Depan',
+        hintText: 'Masukkan Nama Depan',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),

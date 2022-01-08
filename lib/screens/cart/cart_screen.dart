@@ -81,7 +81,7 @@ class CheckOutCart extends StatelessWidget {
                   child: SvgPicture.asset('assets/icons/receipt.svg'),
                 ),
                 Spacer(),
-                Text('Add voucher code'),
+                Text('Pake Voucher'),
                 const SizedBox(width: 10),
                 Icon(Icons.arrow_forward_ios, size: 12, color: hTextColor),
               ],
@@ -95,9 +95,9 @@ class CheckOutCart extends StatelessWidget {
                     text: 'Total:\n',
                     children: [
                       TextSpan(
-                        text: '\$715.40',
+                        text: 'Rp 112.000.00',
                         style: TextStyle(
-                          fontSize: 18,
+                          fontSize: 16,
                           color: Colors.black,
                           fontWeight: FontWeight.w600,
                         ),
@@ -108,7 +108,7 @@ class CheckOutCart extends StatelessWidget {
                 SizedBox(
                   width: 190,
                   child: DefaultButton(
-                    text: 'Check Out',
+                    text: 'Pesan',
                     press: () {},
                   ),
                 ),

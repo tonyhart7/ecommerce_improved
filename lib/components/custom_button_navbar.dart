@@ -41,7 +41,7 @@ class CustomBottomNavBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 'assets/icons/Shop Icon.svg',
                 color: MenuState.home == selectedMenu
-                    ? hPrimaryColor
+                    ? Colors.orange
                     : inActiveIconColor,
               ),
               onPressed: () =>
@@ -60,7 +60,7 @@ class CustomBottomNavBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 'assets/icons/Chat bubble Icon.svg',
                 color: MenuState.message == selectedMenu
-                    ? hPrimaryColor
+                    ? Colors.orange
                     : inActiveIconColor,
               ),
               onPressed: () {},
@@ -69,7 +69,7 @@ class CustomBottomNavBar extends StatelessWidget {
               icon: SvgPicture.asset(
                 'assets/icons/User Icon.svg',
                 color: MenuState.profile == selectedMenu
-                    ? hPrimaryColor
+                    ? Colors.orange
                     : inActiveIconColor,
               ),
               onPressed: () =>

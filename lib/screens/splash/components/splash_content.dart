@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 
-import 'package:ecommerce_improved/constants.dart';
-
 class SplashContent extends StatelessWidget {
   const SplashContent({
     Key? key,
@@ -19,7 +17,7 @@ class SplashContent extends StatelessWidget {
           'MAMAZON',
           style: TextStyle(
             fontSize: 36,
-            color: hPrimaryColor,
+            color: Colors.orange,
             fontWeight: FontWeight.bold,
           ),
         ),

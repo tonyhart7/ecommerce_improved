@@ -14,7 +14,7 @@ class PopularProduct extends StatelessWidget {
     return Column(
       children: [
         SectionTitle(
-          text: 'Popular Product',
+          text: 'Product Populer',
           press: () {},
         ),
         SizedBox(height: 20),

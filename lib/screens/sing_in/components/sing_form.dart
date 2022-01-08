@@ -54,13 +54,13 @@ class _SignFormState extends State<SignForm> {
                   });
                 },
               ),
-              Text('Remember Me'),
+              Text('Ingat Saya'),
               Spacer(),
               GestureDetector(
                 onTap: () => Navigator.pushNamed(
                     context, ForgotPasswordScreen.routeName),
                 child: Text(
-                  'Forgot Password',
+                  'Lupa Password',
                   style: TextStyle(decoration: TextDecoration.underline),
                 ),
               )
@@ -68,16 +68,33 @@ class _SignFormState extends State<SignForm> {
           ),
           FormError(errors: errors),
           SizedBox(height: getProportionalScreenHeight(20)),
-          DefaultButton(
-            text: 'Continue',
-            press: () {
+          // DefaultButton(
+          //   text: 'Continue',
+          //   press: () {},
+          // ),
+          FloatingActionButton.extended(
+            onPressed: () {
+              FocusScopeNode currentFocus = FocusScope.of(context);
+
+              if (!currentFocus.hasPrimaryFocus) {
+                currentFocus.unfocus();
+              }
               if (_formKey.currentState?.validate() ?? false) {
                 _formKey.currentState!.save();
                 Navigator.pushNamed(context, LoginSuccessScreen.routeName);
                 FocusScope.of(context).unfocus();
               }
             },
-          )
+            // icon: SvgPicture.asset(
+            //     'assets/images/icons/AuthViewIcon/facebook.svg',
+            //     height: 18.h),
+            label: const Padding(
+              padding: EdgeInsets.all(8.0),
+              child: Text('Login'),
+            ),
+            foregroundColor: Colors.white,
+            backgroundColor: Colors.orange,
+          ),
         ],
       ),
     );
@@ -107,7 +124,7 @@ class _SignFormState extends State<SignForm> {
       },
       decoration: InputDecoration(
         labelText: 'Password',
-        hintText: 'Enter your password',
+        hintText: 'Masukkan Password',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),
@@ -141,7 +158,7 @@ class _SignFormState extends State<SignForm> {
       },
       decoration: InputDecoration(
         labelText: 'Email',
-        hintText: 'Enter your email',
+        hintText: 'Masukkan Email',
         floatingLabelBehavior: FloatingLabelBehavior.always,
         suffixIcon: Padding(
           padding: const EdgeInsets.only(right: 20),

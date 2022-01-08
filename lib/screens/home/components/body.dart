@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'categories.dart';
 import 'discount_banner.dart';
 import 'home_header.dart';
+import 'staggered_list.dart';
 
 class Body extends StatelessWidget {
   @override
@@ -15,12 +16,13 @@ class Body extends StatelessWidget {
           children: [
             SizedBox(height: 5),
             HomeHeader(),
+            // DiscountBanner(),
+            // SizedBox(height: 30),
+            // Categories(),
+            // SizedBox(height: 30),
+            // SpecialOffers(),
             SizedBox(height: 30),
-            DiscountBanner(),
-            SizedBox(height: 30),
-            Categories(),
-            SizedBox(height: 30),
-            SpecialOffers(),
+            StaggeredListProduct(),
             SizedBox(height: 30),
             PopularProduct(),
             SizedBox(height: 30),

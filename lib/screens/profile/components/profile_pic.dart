@@ -17,7 +17,7 @@ class ProfilePic extends StatelessWidget {
         fit: StackFit.expand,
         children: [
           CircleAvatar(
-            backgroundImage: AssetImage('assets/images/Profile Image.png'),
+            backgroundImage: AssetImage('assets/images/meme.jpg'),
           ),
           Positioned(
             right: -12,

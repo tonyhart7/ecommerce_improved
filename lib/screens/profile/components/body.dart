@@ -10,22 +10,22 @@ class Body extends StatelessWidget {
         ProfilePic(),
         SizedBox(height: 20),
         ProfileMenu(
-          text: 'My Account',
+          text: 'Akun Saya',
           icon: 'assets/icons/User Icon.svg',
           press: () {},
         ),
         ProfileMenu(
-          text: 'Notification',
+          text: 'Notifikasi',
           icon: 'assets/icons/Bell.svg',
           press: () {},
         ),
         ProfileMenu(
-          text: 'Settings',
+          text: 'Pengaturan',
           icon: 'assets/icons/Settings.svg',
           press: () {},
         ),
         ProfileMenu(
-          text: 'Help Center',
+          text: 'Customer Service',
           icon: 'assets/icons/Question mark.svg',
           press: () {},
         ),

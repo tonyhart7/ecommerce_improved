@@ -14,13 +14,13 @@ class NoAccountText extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text(
-          'Dont have an account ?',
+          'Enggak Punya Akun ?',
           style: TextStyle(fontSize: 16),
         ),
         GestureDetector(
           onTap: () => Navigator.pushNamed(context, SignUpScreen.routeName),
           child: Text(
-            'Sing Up',
+            'Daftar',
             style: TextStyle(fontSize: 16, color: hPrimaryColor),
           ),
         ),

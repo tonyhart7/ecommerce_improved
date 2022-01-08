@@ -18,16 +18,16 @@ class Body extends StatelessWidget {
               children: [
                 SizedBox(height: SizeConfig.screenHeight! * 0.04),
                 Text(
-                  'Welcome',
+                  'Selamat Datang',
                   style: TextStyle(
                       color: Colors.black,
                       fontSize: 28,
                       fontWeight: FontWeight.bold),
                 ),
-                Text(
-                  'Sign in with your email and pasword or continue with social media',
-                  textAlign: TextAlign.center,
-                ),
+                // Text(
+                //   'Sign in with your email and pasword or continue with social media',
+                //   textAlign: TextAlign.center,
+                // ),
                 SizedBox(height: SizeConfig.screenHeight! * 0.08),
                 SignForm(),
                 SizedBox(height: SizeConfig.screenHeight! * 0.08),

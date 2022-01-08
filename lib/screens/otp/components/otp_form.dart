@@ -1,4 +1,5 @@
 import 'package:ecommerce_improved/components/default_button.dart';
+import 'package:ecommerce_improved/screens/login_success/components/login_success_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -101,7 +102,15 @@ class _OtpFormState extends State<OtpForm> {
           SizedBox(height: SizeConfig.screenHeight! * 0.15),
           DefaultButton(
             text: 'Continue',
-            press: () {},
+            press: () {
+              FocusScopeNode currentFocus = FocusScope.of(context);
+
+              if (!currentFocus.hasPrimaryFocus) {
+                currentFocus.unfocus();
+              }
+              Navigator.pushNamed(context, LoginSuccessScreen.routeName);
+              FocusScope.of(context).unfocus();
+            },
           )
         ],
       ),

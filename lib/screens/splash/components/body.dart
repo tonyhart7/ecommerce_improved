@@ -14,15 +14,15 @@ class _BodyState extends State<Body> {
   int currentPage = 0;
   List<Map<String, String>> splashData = [
     {
-      'text': 'Welcome to Mamazon, Please buy with your own risk!',
+      'text': 'toko onlene nomor 1 di localhost',
       'image': 'assets/images/splash1.png'
     },
     {
-      'text': 'We provide original product base on international brand',
+      'text': 'kami menyajikan banyak produk halal',
       'image': 'assets/images/splash2.png'
     },
     {
-      'text': 'Easy way to buy Our exclusive product!',
+      'text': 'cepat dan mudah adalah antitesis kami',
       'image': 'assets/images/splash3.png'
     }
   ];
@@ -66,7 +66,7 @@ class _BodyState extends State<Body> {
                       flex: 3,
                     ),
                     DefaultButton(
-                      text: 'Continue',
+                      text: 'Yuk lanjut',
                       press: () {
                         Navigator.pushNamed(context, SignInScreen.routeName);
                       },

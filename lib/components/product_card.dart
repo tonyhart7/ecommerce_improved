@@ -8,7 +8,7 @@ class ProductCard extends StatelessWidget {
   const ProductCard({
     Key? key,
     this.width = 140,
-    this.aspectRation = 1.02,
+    this.aspectRation = 1.0,
     required this.product,
     required this.press,
   }) : super(key: key);
@@ -30,7 +30,7 @@ class ProductCard extends StatelessWidget {
               AspectRatio(
                 aspectRatio: aspectRation,
                 child: Container(
-                  padding: EdgeInsets.all(20),
+                  padding: EdgeInsets.all(2),
                   decoration: BoxDecoration(
                     color: hSecondaryColor.withOpacity(0.1),
                     borderRadius: BorderRadius.circular(15),
@@ -48,9 +48,9 @@ class ProductCard extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(
-                    '\$${product.price}',
+                    'Rp${product.price}00',
                     style: TextStyle(
-                      fontSize: 18,
+                      fontSize: 14,
                       fontWeight: FontWeight.w600,
                       color: hPrimaryColor,
                     ),
