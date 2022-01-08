@@ -1,9 +1,6 @@
 import 'package:ecommerce_improved/screens/home/components/popular_product.dart';
-import 'package:ecommerce_improved/screens/home/components/special_offers.dart';
 import 'package:flutter/material.dart';
 
-import 'categories.dart';
-import 'discount_banner.dart';
 import 'home_header.dart';
 import 'staggered_list.dart';
 
